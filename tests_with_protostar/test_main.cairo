@@ -24,7 +24,6 @@ func test_array_sum{syscall_ptr: felt*}() {
 
 @external
 func test_failing_array_sum{syscall_ptr: felt*}() {
-    %{ expect_revert("TRANSACTION_FAILED") %}
     const ARRAY_SIZE = 3;
 
     // Allocate an array.
@@ -37,6 +36,7 @@ func test_failing_array_sum{syscall_ptr: felt*}() {
 
     let sum = array_sum(ptr, ARRAY_SIZE);
 
+    %{ expect_revert("TRANSACTION_FAILED") %}
     assert sum = 55;
     return ();
 }
