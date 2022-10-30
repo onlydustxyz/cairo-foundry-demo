@@ -2,6 +2,8 @@
 
 This is a sample project to demo the [Cairo-foundry]() test runner.
 
+![](./test-running.gif)
+
 ## Benchmark
 
 This repo contains tests written both for protostar and cairo-foundry.
